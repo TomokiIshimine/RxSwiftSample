@@ -15,6 +15,7 @@
 		7728109D2336456F000C9563 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7728109B2336456F000C9563 /* LaunchScreen.storyboard */; };
 		772810A723364E68000C9563 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 772810A623364E68000C9563 /* RxSwift */; };
 		772810A923364E68000C9563 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 772810A823364E68000C9563 /* RxCocoa */; };
+		772810AB23367A23000C9563 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772810AA23367A23000C9563 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		772810992336456F000C9563 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7728109C2336456F000C9563 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7728109E2336456F000C9563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		772810AA23367A23000C9563 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewModel.swift; path = RxSwiftSample/ViewModel.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				772810A423364AC8000C9563 /* CustomViews */,
 				772810902336456E000C9563 /* AppDelegate.swift */,
 				772810922336456E000C9563 /* SceneDelegate.swift */,
+				772810AA23367A23000C9563 /* ViewModel.swift */,
 				772810942336456E000C9563 /* ViewController.swift */,
 				772810962336456E000C9563 /* Main.storyboard */,
 				772810992336456F000C9563 /* Assets.xcassets */,
@@ -159,6 +162,7 @@
 			files = (
 				772810952336456E000C9563 /* ViewController.swift in Sources */,
 				772810912336456E000C9563 /* AppDelegate.swift in Sources */,
+				772810AB23367A23000C9563 /* ViewModel.swift in Sources */,
 				772810932336456E000C9563 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
