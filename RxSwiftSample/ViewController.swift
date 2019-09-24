@@ -18,21 +18,17 @@ class ViewController: UIViewController {
 	
 	@IBOutlet private weak var inputButton: UIButton!
 	
-	let viewModel = ViewModel()
+	private let disposeBag = DisposeBag()
 	
-	let disposeBag = DisposeBag()
+	private var viewModel:ViewModel?
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		bindViewModel()
+		viewModel = ViewModel(inputText: inputTextField.rx.text.orEmpty.asObservable(), didTapButton: inputButton.rx.tap)
+		
+		viewModel?.driverInputText.drive(outputLabel.rx.text).disposed(by: disposeBag)
+		viewModel?.driverTextColor.drive(outputLabel.rx.backgroundColor).disposed(by: disposeBag)
 	}
-	
-	private func bindViewModel(){
-		inputTextField.rx.text.orEmpty.bind(to: viewModel.inputText).disposed(by: disposeBag)
-		viewModel.inputText.bind(to: outputLabel.rx.text).disposed(by: disposeBag)
-		viewModel.textColor.bind(to: outputLabel.rx.backgroundColor).disposed(by: disposeBag)
-	}
-
 
 }
 
